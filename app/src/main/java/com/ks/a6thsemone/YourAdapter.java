@@ -11,14 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 class YourAdapter extends ArrayAdapter<String> {
     private final Activity context;
-    private final String[] product;
-    private final String[] price;
+    private final ArrayList<String> product;
+    private final ArrayList<String> price;
 
-    public YourAdapter(Activity context, String[] product, String[] price) {
+    public YourAdapter(Activity context, ArrayList<String>product, ArrayList<String> price) {
         super(context, R.layout.mylist, product);
         // TODO Auto-generated constructor stub
 
@@ -36,8 +37,8 @@ class YourAdapter extends ArrayAdapter<String> {
         TextView textPerson = (TextView) view.findViewById(R.id.text1A2);
         TextView textPrice = (TextView) view.findViewById(R.id.text2A2);
 
-        textPerson.setText(product[position]);
-        textPrice.setText(price[position]);
+        textPerson.setText(product.get(position));
+        textPrice.setText(price.get(position));
         return view;
     }
 }

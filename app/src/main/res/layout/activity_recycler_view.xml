@@ -16,22 +16,40 @@
             android:id="@+id/r_edt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ABC" />
+            android:hint="Name" />
 
         <EditText
             android:id="@+id/r_edt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="ABC" />
+            android:hint="Description" />
 
-        <Button
-            android:id="@+id/r_btnAdd"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/bg"
-            android:text="Add"
-            android:textColor="#fff" />
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:id="@+id/r_btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg"
+                android:text="Add"
+                android:textColor="#fff" />
+            <Button
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:id="@+id/r_btnDel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg"
+                android:text="Delete"
+                android:textColor="#fff" />
+        </LinearLayout>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -40,5 +58,5 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/linear1"
         android:scrollbars="vertical"
-        android:background="@drawable/bg"/>
+        android:background="#E392F3"/>
 </RelativeLayout>
