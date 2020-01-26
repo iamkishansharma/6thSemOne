@@ -21,11 +21,9 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     String name;
     String desc;
 
-    MyRecyclerAdapter(Context context, ArrayList all, String a, String b) {
+    MyRecyclerAdapter(Context context, ArrayList all) {
         ct = context;
         al = all;
-        name = a;
-        desc = b;
     }
 
     @Override
@@ -39,8 +37,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     public void onBindViewHolder(final MyHolder holder, final int position) {
         final person p1 = al.get(position);
 
-        holder.tv1.setText(name);
-        holder.tv2.setText(desc);
+        holder.tv1.setText(p1.getName());
+        holder.tv2.setText(p1.getDesc());
         holder.iv.setImageResource(p1.getImg());
 
         holder.ll.setOnClickListener(new View.OnClickListener() {

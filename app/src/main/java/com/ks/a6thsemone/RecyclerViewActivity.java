@@ -46,7 +46,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         });
 
 
-        MyRecyclerAdapter mad = new MyRecyclerAdapter(RecyclerViewActivity.this, mArrayList, a, b);
+        MyRecyclerAdapter mad = new MyRecyclerAdapter(RecyclerViewActivity.this, mArrayList);
         mRecyclerView.setAdapter(mad);
 
     }
