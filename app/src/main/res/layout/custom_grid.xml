@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/personLay"
+    android:gravity="center">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/person_img"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"/>
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:id="@+id/lin"
+        android:gravity="center"
+        android:layout_below="@id/person_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of Person"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/person_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:paddingBottom="10dp"
+            android:textStyle="italic"
+            android:textSize="15dp"/>
+    </LinearLayout>
+</RelativeLayout>
