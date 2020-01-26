@@ -6,7 +6,7 @@ public class person {
     String desc;
     int img;
 
-    public person(String name, String desc, int img){
+    public person(String name, String desc, int img) {
         this.name = name;
         this.desc = desc;
         this.img = img;

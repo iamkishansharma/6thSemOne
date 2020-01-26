@@ -20,21 +20,23 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     ArrayList<person> al;
     String name;
     String desc;
-    MyRecyclerAdapter(Context context, ArrayList all,String a, String b){
+
+    MyRecyclerAdapter(Context context, ArrayList all, String a, String b) {
         ct = context;
         al = all;
         name = a;
         desc = b;
     }
+
     @Override
-    public MyHolder onCreateViewHolder(ViewGroup parent, int viewType){
+    public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater li = LayoutInflater.from(ct);
-        View v = li.inflate(R.layout.custom_lv, parent,false);
-        return  new MyHolder(v);
+        View v = li.inflate(R.layout.custom_lv, parent, false);
+        return new MyHolder(v);
     }
 
     @Override
-    public void onBindViewHolder (final MyHolder holder, final int position){
+    public void onBindViewHolder(final MyHolder holder, final int position) {
         final person p1 = al.get(position);
 
         holder.tv1.setText(name);
@@ -44,7 +46,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         holder.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ct, "Clicked! "+position, Toast.LENGTH_LONG).show();
+                Toast.makeText(ct, "Clicked! " + position, Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -54,7 +56,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         return al.size();
     }
 
-    public class MyHolder extends RecyclerView.ViewHolder{
+    public class MyHolder extends RecyclerView.ViewHolder {
         TextView tv1, tv2;
         ImageView iv;
         RelativeLayout ll;

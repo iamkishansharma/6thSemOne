@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         al = new ArrayList<person>();
         //Creating 5 object
-        for(int i=0;i<10;i++){
-            p = new person("Name "+i,"Description "+i, R.drawable.ic_launcher_foreground);
+        for (int i = 0; i < 10; i++) {
+            p = new person("Name " + i, "Description " + i, R.drawable.ic_launcher_foreground);
             al.add(p);//Adding person object 1 by 1 to ArrayList
         }
-        mad = new MyAdapter(this,R.layout.custom_lv, al);
+        mad = new MyAdapter(this, R.layout.custom_lv, al);
         lv.setAdapter(mad);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,SecondActivity.class);
+                Intent in = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(in);
             }
         });
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in2 = new Intent(MainActivity.this,RecyclerViewActivity.class);
+                Intent in2 = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 startActivity(in2);
             }
         });
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in3 = new Intent(MainActivity.this,CardViewActivity.class);
+                Intent in3 = new Intent(MainActivity.this, CardViewActivity.class);
                 startActivity(in3);
             }
         });
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in4 = new Intent(MainActivity.this,CustomGridView.class);
+                Intent in4 = new Intent(MainActivity.this, CustomGridView.class);
                 startActivity(in4);
             }
         });
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in4 = new Intent(MainActivity.this,BackgroundThreadEx.class);
+                Intent in4 = new Intent(MainActivity.this, BackgroundThreadEx.class);
                 startActivity(in4);
             }
         });

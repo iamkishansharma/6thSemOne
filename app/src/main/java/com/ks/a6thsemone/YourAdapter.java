@@ -18,13 +18,13 @@ class YourAdapter extends ArrayAdapter<String> {
     private final String[] product;
     private final String[] price;
 
-    public YourAdapter(Activity context, String[] product,String[] price) {
+    public YourAdapter(Activity context, String[] product, String[] price) {
         super(context, R.layout.mylist, product);
         // TODO Auto-generated constructor stub
 
-        this.context=context;
-        this.product=product;
-        this.price=price;
+        this.context = context;
+        this.product = product;
+        this.price = price;
 
     }
 
@@ -32,7 +32,7 @@ class YourAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View view = inflater.inflate(R.layout.mylist, null,true);
+        View view = inflater.inflate(R.layout.mylist, null, true);
         TextView textPerson = (TextView) view.findViewById(R.id.text1A2);
         TextView textPrice = (TextView) view.findViewById(R.id.text2A2);
 

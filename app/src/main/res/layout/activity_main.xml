@@ -10,64 +10,71 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Custom List View"
-            android:textStyle="bold"
-            android:textSize="30dp"
             android:background="#000"
+            android:gravity="center_horizontal"
+            android:text="Custom List View"
             android:textColor="#fff"
-            android:gravity="center_horizontal"/>
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
         <ListView
             android:id="@+id/lv"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
+
         <Button
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bg"
-            android:layout_width="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
             android:id="@+id/btn"
-            android:textColor="#fff"
-            android:text="Another Activity"/>
-        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:layout_width="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
+            android:text="Another Activity"
+            android:textColor="#fff" />
+
+        <Button
             android:id="@+id/btn2"
-            android:textColor="#fff"
-            android:text="RecyclerView Activity"/>
-        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:layout_width="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
+            android:text="RecyclerView Activity"
+            android:textColor="#fff" />
+
+        <Button
             android:id="@+id/btn3"
-            android:textColor="#fff"
-            android:text="CardView Activity"/>
-        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:layout_width="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
+            android:text="CardView Activity"
+            android:textColor="#fff" />
+
+        <Button
             android:id="@+id/btn4"
-            android:textColor="#fff"
-            android:text="Custom GridView"/>
-        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:layout_width="200dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
+            android:text="Custom GridView"
+            android:textColor="#fff" />
+
+        <Button
             android:id="@+id/btn5"
-            android:textColor="#fff"
-            android:text="BackGround Thread"/>
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg"
+            android:text="BackGround Thread"
+            android:textColor="#fff" />
     </LinearLayout>
 
 </ScrollView>

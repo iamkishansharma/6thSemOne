@@ -1,39 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:id="@+id/personLay"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/personLay">
+    android:orientation="horizontal">
+
     <ImageView
-        android:layout_centerVertical="true"
         android:id="@+id/person_img"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_background"/>
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher_background" />
+
     <LinearLayout
         android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/person_img"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
         android:orientation="vertical">
+
         <TextView
-            android:layout_weight="1"
             android:id="@+id/person_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name of Person"
-            android:paddingBottom="10dp"
-            android:textStyle="bold"
-            android:textSize="25dp"/>
-        <TextView
             android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:text="Name of Person"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/person_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description"
+            android:layout_weight="1"
             android:paddingBottom="10dp"
-            android:textStyle="italic"
-            android:textSize="20dp"/>
+            android:text="Description"
+            android:textSize="20dp"
+            android:textStyle="italic" />
     </LinearLayout>
 </RelativeLayout>

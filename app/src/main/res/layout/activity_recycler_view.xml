@@ -11,30 +11,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/r_edt1"
-            android:hint="ABC"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ABC" />
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/r_edt2"
-            android:hint="ABC"/>
-        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add"
+            android:hint="ABC" />
+
+        <Button
             android:id="@+id/r_btnAdd"
-            android:textColor="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@drawable/bg"
-            android:layout_gravity="center"/>
+            android:text="Add"
+            android:textColor="#fff" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mRecyclerView"
-        android:layout_below="@+id/linear1"
-        android:scrollbars="vertical"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linear1"
+        android:scrollbars="vertical" />
 </RelativeLayout>

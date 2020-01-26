@@ -43,6 +43,7 @@ public class MyGridAdapter extends ArrayAdapter<person> {
         t1.setText(name);
         t2.setText(desc);
         im.setImageResource(img);
+
         return convertView;
     }
 }

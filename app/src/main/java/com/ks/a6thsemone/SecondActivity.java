@@ -20,8 +20,8 @@ public class SecondActivity extends AppCompatActivity {
 
     EditText ed1, ed2;
     Button add, delete;
-    String [] product = new String[]{"Mobile","Laptop","EarPhone","Data Cable","Charger"};
-    String [] price = new String[]{"Rs.20,000","Rs.80,000","Rs.900","Rs.200","Rs.300"};
+    String[] product = new String[]{"Mobile", "Laptop", "EarPhone", "Data Cable", "Charger"};
+    String[] price = new String[]{"Rs.20,000", "Rs.80,000", "Rs.900", "Rs.200", "Rs.300"};
 //    ArrayList<String> product = new ArrayList<>();
 //    ArrayList<String> price = new ArrayList<>();
 
@@ -37,18 +37,18 @@ public class SecondActivity extends AppCompatActivity {
         delete = findViewById(R.id.del);
 
         lv2 = findViewById(R.id.lv2);
-        YourAdapter yourAdapter = new YourAdapter(SecondActivity.this,product,price);
+        YourAdapter yourAdapter = new YourAdapter(SecondActivity.this, product, price);
         lv2.setAdapter(yourAdapter);
 
 
-        final String pro =  ed1.getText().toString();
-        final String pri =  ed2.getText().toString();
+        final String pro = ed1.getText().toString();
+        final String pri = ed2.getText().toString();
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //TODO:::::::
-                Toast.makeText(SecondActivity.this,"Added",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondActivity.this, "Added", Toast.LENGTH_SHORT).show();
             }
         });
 

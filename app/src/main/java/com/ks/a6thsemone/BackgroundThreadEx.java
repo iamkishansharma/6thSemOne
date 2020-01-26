@@ -16,7 +16,7 @@ public class BackgroundThreadEx extends AppCompatActivity {
 
     ProgressBar pb;
     ListView lv;
-    String[] arr = {"1","2","3","4","5","6","7","8","9","10"};
+    String[] arr = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
     ArrayList<String> al;
     ArrayAdapter<String> ad;
 
@@ -30,7 +30,7 @@ public class BackgroundThreadEx extends AppCompatActivity {
         lv = findViewById(R.id.list_bg);
 
         al = new ArrayList<>();
-        ad = new ArrayAdapter<>(BackgroundThreadEx.this, android.R.layout.simple_list_item_1,arr);
+        ad = new ArrayAdapter<>(BackgroundThreadEx.this, android.R.layout.simple_list_item_1, arr);
         lv.setAdapter(ad);
 
         new MyTask().execute();
@@ -38,16 +38,16 @@ public class BackgroundThreadEx extends AppCompatActivity {
 
     class MyTask extends AsyncTask<Void, Integer, String> {
 
-        int count=0;
+        int count = 0;
 
         @Override
         protected String doInBackground(Void... voids) {
-            for (int i=1;i<=10;i++){
+            for (int i = 1; i <= 10; i++) {
                 publishProgress(i);
-                count = count +1;
-                try{
+                count = count + 1;
+                try {
                     Thread.sleep(1000);
-                }catch(InterruptedException e){
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
@@ -60,7 +60,7 @@ public class BackgroundThreadEx extends AppCompatActivity {
             pb.setMax(10);
             pb.setProgress(0);
             pb.setVisibility(View.VISIBLE);
-            count=0;
+            count = 0;
         }
 
 
@@ -68,14 +68,14 @@ public class BackgroundThreadEx extends AppCompatActivity {
         protected void onProgressUpdate(Integer... values) {
             //super.onProgressUpdate(values[0]);
             pb.setProgress(values[0]);
-            al.add(arr[count-1]);
+            al.add(arr[count - 1]);
             ad.notifyDataSetChanged();
         }
 
         @Override
         protected void onPostExecute(String s) {
             //super.onPostExecute(s);
-            Toast.makeText(BackgroundThreadEx.this,s,Toast.LENGTH_LONG).show();
+            Toast.makeText(BackgroundThreadEx.this, s, Toast.LENGTH_LONG).show();
             pb.setVisibility(View.INVISIBLE);
         }
     }

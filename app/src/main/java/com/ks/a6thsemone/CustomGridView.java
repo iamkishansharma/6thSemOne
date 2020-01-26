@@ -16,6 +16,7 @@ public class CustomGridView extends AppCompatActivity {
     MyGridAdapter madG;
     ArrayList<person> mArrayList;
     person p;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +26,8 @@ public class CustomGridView extends AppCompatActivity {
 
         mArrayList = new ArrayList<>();
         //Creating 5 object
-        for(int i=0;i<10;i++){
-            p = new person("Name "+i,"Description "+i, R.drawable.ic_launcher_background);
+        for (int i = 0; i < 10; i++) {
+            p = new person("Name " + i, "Description " + i, R.drawable.ic_launcher_background);
             mArrayList.add(p);//Adding person object 1 by 1 to ArrayList
         }
 

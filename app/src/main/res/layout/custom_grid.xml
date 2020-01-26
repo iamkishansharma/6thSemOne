@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/personLayG"
     android:layout_width="150dp"
     android:layout_height="220dp"
-    android:id="@+id/personLayG"
     android:gravity="center">
+
     <ImageView
-        android:contentDescription="This Is Image"
-        android:layout_centerInParent="true"
         android:id="@+id/person_imgG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background"/>
-    <LinearLayout
         android:layout_centerInParent="true"
+        android:contentDescription="This Is Image"
+        android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
         android:id="@+id/lin"
-        android:gravity="center"
-        android:layout_below="@id/person_imgG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/person_imgG"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical">
+
         <TextView
-            android:textColor="#3F51B5"
             android:id="@+id/person_nameG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name of Person"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textColor="#3F51B5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
-            android:textColor="#E91E63"
             android:id="@+id/person_descG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description"
-            android:textStyle="italic"
-            android:textSize="15sp"/>
+            android:textColor="#E91E63"
+            android:textSize="15sp"
+            android:textStyle="italic" />
     </LinearLayout>
 </RelativeLayout>
