@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class CustomGridView extends AppCompatActivity {
 
     GridView mGridView;
-    MyAdapter mad;
+    MyGridAdapter madG;
     ArrayList<person> mArrayList;
     person p;
     @Override
@@ -23,14 +23,15 @@ public class CustomGridView extends AppCompatActivity {
 
         mGridView = findViewById(R.id.gv);
 
-        mArrayList = new ArrayList<person>();
+        mArrayList = new ArrayList<>();
         //Creating 5 object
         for(int i=0;i<10;i++){
-            p = new person("Name "+i,"Description "+i, R.drawable.ic_launcher_foreground);
+            p = new person("Name "+i,"Description "+i, R.drawable.ic_launcher_background);
             mArrayList.add(p);//Adding person object 1 by 1 to ArrayList
         }
-        mad = new MyAdapter(this,R.layout.custom_grid, mArrayList);
-        mGridView.setAdapter(mad);
+
+        madG = new MyGridAdapter(this, R.layout.custom_grid, mArrayList);
+        mGridView.setAdapter(madG);
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
