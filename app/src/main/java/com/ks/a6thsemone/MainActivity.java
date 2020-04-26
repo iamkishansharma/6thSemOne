@@ -15,9 +15,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView lv;
-    MyAdapter mad;
     ArrayList<person> al;
     person p;
+
+    String[] names = {"Kishan Sharma","Mohsin Khan","Summit Gangwar","Mark Zukerberg","Alien Shik","Sundar Pichai","Anything Sharma","Anyone Khan","Nothing Gangwar","Hello Anything"};
+    String[] descs = {"Data Scientist","Android Developer","IOS Developer"," Project Manager","Senior Manager","Data Scientist","Android Developer","IOS Developer"," Project Manager","Senior Manager"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,61 +29,52 @@ public class MainActivity extends AppCompatActivity {
         lv = findViewById(R.id.lv);
 
         al = new ArrayList<person>();
-        //Creating 5 object
+        //Creating 10 object
         for (int i = 0; i < 10; i++) {
-            p = new person("Name " + i, "Description " + i, R.drawable.ic_launcher_foreground);
+            p = new person(names[i], descs[i], R.drawable.ic_launcher_foreground);
             al.add(p);//Adding person object 1 by 1 to ArrayList
         }
+
+        MyAdapter mad;
         mad = new MyAdapter(this, R.layout.custom_lv, al);
         lv.setAdapter(mad);
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "OOOOO ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, names[position], Toast.LENGTH_SHORT).show();
             }
         });
 
+    }
 
-        //Button for Another activity
-        Button btn = findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(in);
-            }
-        });
-        Button btn2 = findViewById(R.id.btn2);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in2 = new Intent(MainActivity.this, RecyclerViewActivity.class);
-                startActivity(in2);
-            }
-        });
-        Button btn3 = findViewById(R.id.btn3);
-        btn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in3 = new Intent(MainActivity.this, CardViewActivity.class);
-                startActivity(in3);
-            }
-        });
-        Button btn4 = findViewById(R.id.btn4);
-        btn4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in4 = new Intent(MainActivity.this, CustomGridView.class);
-                startActivity(in4);
-            }
-        });
-        Button btn5 = findViewById(R.id.btn5);
-        btn5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent in4 = new Intent(MainActivity.this, BackgroundThreadEx.class);
-                startActivity(in4);
-            }
-        });
+    public void sqlLiteButton(View view) {
+        Intent in = new Intent(MainActivity.this, SqlLiteActivity.class);
+        startActivity(in);
+    }
+
+    public void backgroundThread(View view) {
+        Intent in = new Intent(MainActivity.this, BackgroundThreadEx.class);
+        startActivity(in);
+    }
+
+    public void customGridView(View view) {
+        Intent in = new Intent(MainActivity.this, CustomGridView.class);
+        startActivity(in);
+    }
+
+    public void cardViewActivity(View view) {
+        Intent in = new Intent(MainActivity.this, CardViewActivity.class);
+        startActivity(in);
+    }
+
+    public void recyclerViewActivity(View view) {
+        Intent in = new Intent(MainActivity.this, RecyclerViewActivity.class);
+        startActivity(in);
+    }
+
+    public void customListViewActivity(View view) {
+        Intent in = new Intent(MainActivity.this, SecondActivity.class);
+        startActivity(in);
     }
 }

@@ -32,14 +32,13 @@ public class MyAdapter extends ArrayAdapter<person> {
         String desc = getItem(position).getDesc();
         int img = getItem(position).getImg();
 
-        person mperson = new person(name, desc, img);
-
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
         TextView t1 = (TextView) convertView.findViewById(R.id.person_name);
         TextView t2 = (TextView) convertView.findViewById(R.id.person_desc);
         ImageView im = (ImageView) convertView.findViewById(R.id.person_img);
+
         t1.setText(name);
         t2.setText(desc);
         im.setImageResource(img);

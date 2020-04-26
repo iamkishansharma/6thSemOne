@@ -41,8 +41,16 @@ public class BackgroundThreadEx extends AppCompatActivity {
         int count = 0;
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pb.setMax(100);
+            pb.setProgress(0);
+            pb.setVisibility(View.VISIBLE);
+            count = 0;
+        }
+        @Override
         protected String doInBackground(Void... voids) {
-            for (int i = 1; i <= 10; i++) {
+            for (int i = 1; i <= 100; i++) {
                 publishProgress(i);
                 count = count + 1;
                 try {
@@ -53,17 +61,6 @@ public class BackgroundThreadEx extends AppCompatActivity {
             }
             return "Completed!";
         }
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pb.setMax(10);
-            pb.setProgress(0);
-            pb.setVisibility(View.VISIBLE);
-            count = 0;
-        }
-
-
         @Override
         protected void onProgressUpdate(Integer... values) {
             //super.onProgressUpdate(values[0]);
@@ -71,7 +68,6 @@ public class BackgroundThreadEx extends AppCompatActivity {
             al.add(arr[count - 1]);
             ad.notifyDataSetChanged();
         }
-
         @Override
         protected void onPostExecute(String s) {
             //super.onPostExecute(s);

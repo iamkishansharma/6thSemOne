@@ -18,8 +18,6 @@ import java.util.ArrayList;
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyHolder> {
     Context ct;
     ArrayList<person> al;
-    String name;
-    String desc;
 
     MyRecyclerAdapter(Context context, ArrayList all) {
         ct = context;
@@ -44,7 +42,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
         holder.ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ct, "Clicked! " + position, Toast.LENGTH_LONG).show();
+                Toast.makeText(ct, "Clicked! " + p1.getName(), Toast.LENGTH_LONG).show();
             }
         });
     }
