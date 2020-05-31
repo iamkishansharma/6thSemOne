@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/it1"
+        app:showAsAction="never"
+        android:title="@string/delete"/>
+    <item android:id="@+id/it2"
+        app:showAsAction="never"
+        android:title="@string/update"/>
+    <item android:id="@+id/it3"
+        app:showAsAction="never"
+        android:title="@string/more">
+    <menu>
+        <item android:id="@+id/it4"
+            app:showAsAction="always"
+            android:icon="@drawable/about_us"
+            android:title="@string/about_us"/>
+        <item android:id="@+id/it5"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/power"
+            android:title="@string/log_out"/>
+    </menu>
+    </item>
+</menu>

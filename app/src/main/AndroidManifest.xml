@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewAll"></activity>
-        <activity android:name=".SqlLiteActivity" />
+        <activity android:name=".ProgressBarActivity" />
+        <activity android:name=".sqlliteDb.ViewAll"/>
+        <activity android:name=".sqlliteDb.SqlLiteActivity" />
         <activity android:name=".BackgroundThreadEx" />
         <activity android:name=".CustomGridView" />
         <activity android:name=".CardViewActivity" />

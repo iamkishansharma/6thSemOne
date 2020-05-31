@@ -16,16 +16,16 @@
             android:layout_height="wrap_content"
             android:background="#000"
             android:gravity="center_horizontal"
-            android:text="Custom List View"
+            android:text="@string/custom_list_view"
             android:textColor="#fff"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <ListView
             android:id="@+id/lv"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:nestedScrollingEnabled="true"/>
+            android:nestedScrollingEnabled="true" />
 
         <Button
             android:id="@+id/btn"
@@ -34,7 +34,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:text="ListView Activity"
+            android:text="@string/listview_activity"
             android:onClick="customListViewActivity"
             android:textColor="#fff" />
 
@@ -45,7 +45,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:text="RecyclerView Activity"
+            android:text="@string/recyclerview_activity"
             android:onClick="recyclerViewActivity"
             android:textColor="#fff" />
 
@@ -56,7 +56,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:text="CardView Activity"
+            android:text="@string/cardview_activity"
             android:onClick="cardViewActivity"
             android:textColor="#fff" />
 
@@ -67,7 +67,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:text="Custom GridView"
+            android:text="@string/custom_gridview"
             android:onClick="customGridView"
             android:textColor="#fff" />
 
@@ -78,8 +78,18 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:text="BackGround Thread"
+            android:text="@string/background_thread"
             android:onClick="backgroundThread"
+            android:textColor="#fff" />
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg"
+            android:text="@string/progress_bar"
+            android:onClick="progressBarButton"
             android:textColor="#fff" />
         <Button
             android:id="@+id/btn7"
@@ -88,7 +98,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/bg"
-            android:text="Sql Lite"
+            android:text="@string/sql_lite"
             android:onClick="sqlLiteButton"
             android:textColor="#fff" />
     </LinearLayout>

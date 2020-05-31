@@ -4,42 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SqlLiteActivity">
+    android:padding="@dimen/screen_padding"
+    tools:context=".sqlliteDb.SqlLiteActivity">
+
     <EditText
+        android:id="@+id/sqlName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Id"
-        android:id="@+id/sqlId"/>
+        android:hint="Full Name" />
+
     <EditText
+        android:id="@+id/sqlMarks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Full Name"
-        android:layout_below="@id/sqlId"
-        android:id="@+id/sqlName"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Marks"
         android:layout_below="@id/sqlName"
-        android:id="@+id/sqlMarks"/>
+        android:hint="Marks" />
+
     <EditText
+        android:id="@+id/sqlPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone"
         android:layout_below="@id/sqlMarks"
-        android:id="@+id/sqlPhone"/>
-    <Button
-        android:layout_width="wrap_content"
+        android:hint="Phone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sqlAdd"
         android:layout_below="@id/sqlPhone"
-        android:text="Add"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sqlViewAll"
-        android:text="View All"
-        android:layout_toEndOf="@id/sqlAdd"
-        android:layout_below="@id/sqlPhone"/>
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/sqlAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/fg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/add"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/sqlViewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/view_all"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
 </RelativeLayout>

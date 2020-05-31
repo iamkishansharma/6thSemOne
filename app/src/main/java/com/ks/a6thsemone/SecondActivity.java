@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -15,9 +14,7 @@ import java.util.ArrayList;
 public class SecondActivity extends AppCompatActivity {
 
 
-    ListView lv2;
-    YourAdapter yad2;
-
+    ListView lv3;
     EditText ed1, ed2;
     Button add, delete;
 //    String[] product = new String[]{"Mobile", "Laptop", "EarPhone", "Data Cable", "Charger"};
@@ -36,10 +33,10 @@ public class SecondActivity extends AppCompatActivity {
         add = findViewById(R.id.add);
         delete = findViewById(R.id.del);
 
-        lv2 = findViewById(R.id.lv2);
+        lv3 = findViewById(R.id.lv3);
 
         final YourAdapter yourAdapter = new YourAdapter(SecondActivity.this, product, price);
-        lv2.setAdapter(yourAdapter);
+        lv3.setAdapter(yourAdapter);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +44,7 @@ public class SecondActivity extends AppCompatActivity {
                 final String pro = ed1.getText().toString();
                 final String pri = ed2.getText().toString();
 
-                if(pro.equals("")&&pri.equals("")){
+                if(pro.length()==0 && pri.length()==0){
                     Toast.makeText(SecondActivity.this, "ERROR....", Toast.LENGTH_SHORT).show();
                 }else{
                     product.add(pro);

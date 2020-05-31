@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.ks.a6thsemone.sqlliteDb.SqlLiteActivity;
 
 import java.util.ArrayList;
 
@@ -17,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     ListView lv;
     ArrayList<person> al;
     person p;
-
     String[] names = {"Kishan Sharma","Mohsin Khan","Summit Gangwar","Mark Zukerberg","Alien Shik","Sundar Pichai","Anything Sharma","Anyone Khan","Nothing Gangwar","Hello Anything"};
     String[] descs = {"Data Scientist","Android Developer","IOS Developer"," Project Manager","Senior Manager","Data Scientist","Android Developer","IOS Developer"," Project Manager","Senior Manager"};
 
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sqlLiteButton(View view) {
-        Intent in = new Intent(MainActivity.this, SqlLiteActivity.class);
+        Intent in = new Intent(MainActivity.this, com.ks.a6thsemone.sqlliteDb.SqlLiteActivity.class);
         startActivity(in);
     }
 
@@ -76,5 +78,9 @@ public class MainActivity extends AppCompatActivity {
     public void customListViewActivity(View view) {
         Intent in = new Intent(MainActivity.this, SecondActivity.class);
         startActivity(in);
+    }
+
+    public void progressBarButton(View view) {
+        startActivity(new Intent(MainActivity.this, ProgressBarActivity.class));
     }
 }

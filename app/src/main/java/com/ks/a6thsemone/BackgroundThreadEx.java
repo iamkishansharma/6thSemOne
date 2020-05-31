@@ -43,14 +43,14 @@ public class BackgroundThreadEx extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pb.setMax(100);
+            pb.setMax(10);
             pb.setProgress(0);
             pb.setVisibility(View.VISIBLE);
             count = 0;
         }
         @Override
         protected String doInBackground(Void... voids) {
-            for (int i = 1; i <= 100; i++) {
+            for (int i = 1; i <= 10; i++) {
                 publishProgress(i);
                 count = count + 1;
                 try {

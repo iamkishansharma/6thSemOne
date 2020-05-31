@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewAll"
-    android:id="@+id/sqlList">
+    tools:context=".sqlliteDb.ViewAll"
+    android:orientation="vertical">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sqlList"
+        android:divider="@android:color/white"
+        android:background="#FFFFFF"
+        android:scrollIndicators="right"
+        android:dividerHeight="@dimen/cardview_default_elevation"/>
 
-</ListView>
+</LinearLayout>

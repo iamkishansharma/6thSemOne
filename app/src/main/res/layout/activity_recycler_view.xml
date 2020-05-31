@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecyclerViewActivity">
+    tools:context=".RecyclerViewActivity"
+    android:padding="@dimen/screen_padding">
 
     <LinearLayout
         android:id="@+id/linear1"
@@ -58,5 +59,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/linear1"
         android:scrollbars="vertical"
-        android:background="#E392F3"/>
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg" />
 </RelativeLayout>
